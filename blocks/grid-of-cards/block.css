@@ -1,0 +1,21 @@
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    column-gap: 32px;
+    row-gap: 32px;
+}
+
+.gridItem {
+    padding: 26px;
+    background: white;
+    color: #404248;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.gridItem h4 {
+    color:  #404248;
+    margin: 0px;
+}

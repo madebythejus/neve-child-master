@@ -1,0 +1,22 @@
+.servicesContainer {
+    padding: 1rem;
+    background-color: lavenderblush;
+}
+
+.servicesItem {
+    /* background-color: darkgray; */
+    /* border: solid 1px; */
+	display: flex;
+	align-items: center;
+}
+
+.servicesItem {
+margin-bottom: 1.4rem;
+}
+.servicesItem > img {
+	margin-right: 1.5rem;
+}
+
+.servicesTextItems * {
+  margin-bottom: 0.1rem;
+}
