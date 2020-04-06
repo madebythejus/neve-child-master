@@ -22,7 +22,6 @@ function list_script() {
     wp_enqueue_script('the_list_script');
 }
 
-
 /**
  * Enqueue Font Awesome.
  */
@@ -30,9 +29,17 @@ function custom_load_font_awesome() {
     wp_enqueue_style( 'font-awesome-free', '//use.fontawesome.com/releases/v5.2.0/css/all.css' );
 }
 
+/**
+ * Enqueue Permanent Marker.
+ */
+function custom_load_permanent_marker() {
+    wp_enqueue_style( 'permanent_marker_font', '//fonts.googleapis.com/css2?family=Permanent+Marker&display=swap' );
+}
+
 // enqueing the scripts
 
 add_action( 'wp_enqueue_scripts', 'custom_load_font_awesome' );
+add_action( 'wp_enqueue_scripts', 'custom_load_permanent_marker' );
 add_action( 'wp_enqueue_scripts', 'tabs_script' , 20 );
 add_action( 'wp_enqueue_scripts', 'list_script', 20 );
 add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
