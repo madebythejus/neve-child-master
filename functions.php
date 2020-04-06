@@ -12,9 +12,14 @@ if ( ! function_exists( 'neve_child_load_css' ) ):
 	}
 endif;
 
-function some_cool_scripts() {
-    wp_register_script('my_amazing_script', get_stylesheet_directory_uri() . '/aria-tablist.min.js', array('jquery'),'1.1', false);
-    wp_enqueue_script('my_amazing_script');
+function tabs_script() {
+    wp_register_script('the_tabs_script', get_stylesheet_directory_uri() . '/aria-tablist.min.js', array('jquery'),'1.1', false);
+    wp_enqueue_script('the_tabs_script');
+}
+
+function list_script() {
+    wp_register_script('the_list_script', get_stylesheet_directory_uri() . '/list.min.js', array('jquery'),'1.1', false);
+    wp_enqueue_script('the_list_script');
 }
 
 
@@ -28,7 +33,8 @@ function custom_load_font_awesome() {
 // enqueing the scripts
 
 add_action( 'wp_enqueue_scripts', 'custom_load_font_awesome' );
-add_action( 'wp_enqueue_scripts', 'some_cool_scripts' , 20 );
+add_action( 'wp_enqueue_scripts', 'tabs_script' , 20 );
+add_action( 'wp_enqueue_scripts', 'list_script', 20 );
 add_action( 'wp_enqueue_scripts', 'neve_child_load_css', 20 );
 
 // adding SVG upload support

@@ -7,14 +7,6 @@
 *
 */
 
-// Register js first
-function some_good_scripts() {
-    wp_register_script('my_amazing_script', get_stylesheet_directory_uri() . '/coolscript.js', array('jquery'),'1.1', true);
-    wp_enqueue_script('my_amazing_script');
-} 
-
-add_action( 'wp_enqueue_scripts', 'some_good_scripts' , 20 ); 
-
 // Actual code starts here
  // Get the 'movies' post type
 $args = array('post_type' => 'tutor',);
