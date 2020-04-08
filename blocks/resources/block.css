@@ -1,8 +1,9 @@
 .blockHeader{
     display: flex;
     justify-content: space-between;
-    padding-bottom: 2rem;
     align-items: center;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    margin-bottom: 1.6rem;
 }
 
 .search {
@@ -20,7 +21,7 @@
 
 .categoryHeading * {
     /* text-align: right; */
-    padding: 0.5rem 0rem 0 0;
+    padding: 0.4rem 0rem 0 0;
 }
 
 .categoryListItems {
@@ -37,6 +38,6 @@
 .listItem a {
     text-decoration: none !important;
     display: block;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
 }

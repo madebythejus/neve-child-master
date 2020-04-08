@@ -57,5 +57,10 @@
 	border-radius: 50%;
 	object-fit: contain;
 	object-position: center;
-	margin-right: 10px;
+  margin: 10px;
+  margin-right: 1rem;
+}
+
+.tabbedContent {
+  padding: 1.6rem;
 }

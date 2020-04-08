@@ -27,16 +27,18 @@ wp_reset_query();
             
             <!-- putting slug as aria controls value -->
                 <div aria-controls="<?php echo $slug; ?>">
-                <!-- using thumbnail url in img -->
-                <img class="roundImg" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="">
+                    <!-- using thumbnail url in img -->
+                    <img class="roundImg" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="">
+                    
                     <div>
-                    <?php the_title(); ?>
-                    <br>
+                    <h4 class="notAHeading"><?php the_title(); ?></h4>
                     <!-- Getting description. get post meta, get the ID of current post, field name, true for string vs array -->
+                    <span>
                     <?php 
                     $description = get_post_meta(get_the_ID(), 'tutor_specialization', TRUE); 
                     echo $description;
                     ?>
+                    </span>
                     </div>
 
                 </div>
@@ -51,7 +53,7 @@ wp_reset_query();
                 $slug       = preg_replace("/[-]+/i", "-", $slug); ?> 
             
                 <div id="<?php echo $slug; ?>" class="tabbedContent">
-                    <h3><?php the_title(); ?></h3>
+                    <h2><?php the_title(); ?></h2>
                     <?php the_content(); ?>
                 
                 </div>

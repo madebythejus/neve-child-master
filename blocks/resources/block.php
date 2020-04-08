@@ -5,8 +5,8 @@
 
 <?php 
 	// Actual code starts here
-	// Get the 'resources_collection' post type
-	$args = array('post_type' => 'resources_collection',);
+	// Get the 'resources_categories' post type
+	$args = array('post_type' => 'resources_categories',);
 	$loop = new WP_Query($args);
 	wp_reset_query();
 ?>
