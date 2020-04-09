@@ -1,3 +1,9 @@
+#tabContainer {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  margin-bottom: 2rem;
+}
+
 [role='tablist'] {
     width: 100%;
     display: flex;
@@ -11,7 +17,7 @@
   
   [role='tab'], [role='tabpanel'] {
     border: 0.0625rem solid #ccc;
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); */
     margin-right: 0.625rem;
     margin-bottom: 0.625rem;
     padding: 0.4375rem 0.625rem;
@@ -36,6 +42,7 @@
     background: blue;
     border-color: #606060;
       color: white;
+      outline: 0px;
   /*   font-weight: bold; */
   /*   border-left-width: 0.25rem; */
   }
@@ -44,11 +51,6 @@
     opacity: 0.65;
     font-weight: normal;
     cursor: not-allowed;
-  }
-  
-  #tabContainer {
-      display: grid;
-      grid-template-columns: 2fr 3fr;
   }
 
   .roundImg {
@@ -63,4 +65,23 @@
 
 .tabbedContent {
   padding: 1.6rem;
+}
+
+.accordionHeader {
+	display: none;
+}
+
+@media only screen and (max-width: 961px) {
+  #tabContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+	#theTabs {
+		display: none;
+	}
+	.accordionHeader {
+  display: flex;
+  margin: 0.625rem 0 0 0;
+	}
 }

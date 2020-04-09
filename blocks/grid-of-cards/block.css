@@ -4,6 +4,8 @@
     grid-auto-rows: 1fr;
     column-gap: 32px;
     row-gap: 32px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .gridItem {
@@ -15,7 +17,7 @@
     align-items: center;
 }
 
-.gridItem h4 {
+.gridItem * {
     color:  #404248;
     margin: 0px;
 }

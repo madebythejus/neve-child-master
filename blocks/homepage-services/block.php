@@ -5,7 +5,7 @@
             <h4 class="fontSlim"><?php block_field( 'welcome-text' ); ?></h4>
         </div>
         <div class="lastItem">
-            <div class="sideBySide ">
+            <div class="sideBySide">
                 <span class="dashicons dashicons-clock"></span>
                 <h4><?php block_field( 'welcome-timings' ); ?></h4>
             </div>
