@@ -1,3 +1,17 @@
+<!-- setting image as rounded or icons -->
+
+<?php
+if ( block_value( 'do-these-use-icons' ) ) {
+ $imageClass = "iconImg";
+} else {
+    $imageClass = "roundImg";
+}
+
+$chosenPostType = block_field( 'chosen-post-type', false );
+?>
+
+
+
 <?php
 /**
 * CPT Tabs Block
@@ -9,7 +23,8 @@
 
 // Actual code starts here
  // Get the 'movies' post type
-$args = array('post_type' => 'tutor',);
+// $args = array('post_type' => 'tutor',);
+$args = array('post_type' => "$chosenPostType",);
 $loop = new WP_Query($args);
 wp_reset_query();
 ?>
@@ -27,14 +42,14 @@ wp_reset_query();
                 <!-- putting slug as aria controls value -->
                 <div aria-controls="<?php echo $slug; ?>">
                     <!-- using thumbnail url in img -->
-                    <img class="roundImg" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="">
+                    <img class="<?php echo $imageClass ?>" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="">
                     
                     <div>
                         <h4 class="notAHeading"><?php the_title(); ?></h4>
                         <!-- Getting description. get post meta, get the ID of current post, field name, true for string vs array -->
                         <span>
                         <?php 
-                        $description = get_post_meta(get_the_ID(), 'tutor_specialization', TRUE); 
+                        $description = get_post_meta(get_the_ID(), 'description', TRUE); 
                         echo $description;
                         ?>
                         </span>
@@ -55,14 +70,14 @@ wp_reset_query();
                     <!-- putting slug as aria controls value -->
                     <div class="accordionHeader" aria-controls="<?php echo $slug; ?>">
                         <!-- using thumbnail url in img -->
-                        <img class="roundImg" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="">
+                        <img class="<?php echo $imageClass ?>" src="<?php the_post_thumbnail_url('thumbnail'); ?>" alt="">
                         
                         <div>
                             <h4 class="notAHeading"><?php the_title(); ?></h4>
                             <!-- Getting description. get post meta, get the ID of current post, field name, true for string vs array -->
                             <span>
                             <?php 
-                            $description = get_post_meta(get_the_ID(), 'tutor_specialization', TRUE); 
+                            $description = get_post_meta(get_the_ID(), 'description', TRUE); 
                             echo $description;
                             ?>
                             </span>

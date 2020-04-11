@@ -39,8 +39,8 @@
   }
   
   [role='tab'][aria-selected='true'] {
-    background: blue;
-    border-color: #606060;
+    background: #4aace9;
+    /* border-color: #606060; */
       color: white;
       outline: 0px;
   /*   font-weight: bold; */
@@ -61,6 +61,21 @@
 	object-position: center;
   margin: 10px;
   margin-right: 1rem;
+}
+
+.iconImg {
+  height: 3em;
+	width: 3em;
+	object-fit: contain;
+	object-position: center;
+  margin: 10px;
+  margin-right: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+[role='tab'][aria-selected='true'] .iconImg {
+  filter: invert(1);
 }
 
 .tabbedContent {

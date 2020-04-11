@@ -1,0 +1,9 @@
+.sideBySide {
+    display: grid;
+grid-template-columns: auto 1fr;
+    }
+
+.sideBySide > :first-child{
+    margin-right: 0.6rem;
+    margin-top: 0.2rem;
+}

@@ -29,14 +29,18 @@ function custom_load_permanent_marker() {
     wp_enqueue_style( 'permanent_marker_font', '//fonts.googleapis.com/css2?family=Permanent+Marker&display=swap' );
 }
 
-// enqueue Dashicons
-function ww_load_dashicons(){
-    wp_enqueue_style('dashicons');
-}
+// function custom_load_fontello() {
+//     wp_enqueue_style( 'fontello', get_stylesheet_directory_uri() . '/iconfont/css/fontello.js' );
+// }
+
+// // enqueue Dashicons
+// function ww_load_dashicons(){
+//     wp_enqueue_style('dashicons');
+// }
 
 
 // enqueing the scripts
-add_action('wp_enqueue_scripts', 'ww_load_dashicons');
+// add_action('wp_enqueue_scripts', 'custom_load_fontello');
 add_action( 'wp_enqueue_scripts', 'custom_load_permanent_marker' );
 add_action( 'wp_enqueue_scripts', 'tabs_script' , 20 );
 add_action( 'wp_enqueue_scripts', 'list_script', 20 );

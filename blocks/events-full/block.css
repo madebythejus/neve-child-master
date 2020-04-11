@@ -19,18 +19,7 @@ justify-content: center;
 .eventImage * {
     max-height: 400px;
 }
-
-.sideBySide {
-    display: flex;
-    /* align-items: baseline; */
-    }
     
-.sideBySide > :first-child{
-margin-right: 1.2rem;
-font-size: 1.9rem;
-line-height: 0.75;
-}
-
 .lastItem {
     margin-top: 2rem;
 }
